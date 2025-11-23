@@ -1,0 +1,31 @@
+# Build results
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+*.userprefs
+
+# Avalonia
+*.pfx
+*.Development.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Your backup folder
+BACKUP/
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Test results
+TestResults/
+*.trx
