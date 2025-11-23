@@ -1,0 +1,98 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaTestApp.ViewModels"
+        x:Class="AvaloniaTestApp.Views.MainWindow"
+        x:DataType="vm:CalculatorViewModel"
+        Title="Calculator Test App"
+        Width="450" Height="550">
+
+    <Design.DataContext>
+        <vm:CalculatorViewModel/>
+    </Design.DataContext>
+
+    <StackPanel Margin="20" Spacing="15">
+        
+        <!-- Title -->
+        <TextBlock Text="My First C# Simple Calculator App" 
+                   FontSize="35" 
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,10"/>
+        
+        <!-- First Number Input -->
+        <!-- x:Name - gives a button a name-->
+        <StackPanel Spacing="5">
+            <TextBlock Text="First Number:" FontWeight="SemiBold"/> <!-- When user types "2" (or any number), it updates FirstNumber property-->
+            <TextBox x:Name="FirstNumberBox"
+                     Text="{Binding FirstNumberText}"
+                     Watermark="Please enter first number"
+                     Width="200"
+                     HorizontalAlignment="Left"/>
+        </StackPanel>
+        
+        <!-- Second Number Input -->
+        <StackPanel Spacing="5">
+            <TextBlock Text="Second Number:" FontWeight="SemiBold"/> <!-- When user types "2" (or any number), it updates SecondNumber property-->
+            <TextBox x:Name="SecondNumberBox"
+                     Text="{Binding SecondNumberText}"
+                     Watermark="Enter second number"
+                     Width="200"
+                     HorizontalAlignment="Left"/>
+        </StackPanel>
+        
+        <!-- Operation Buttons (Row 1) -->
+        <!-- Binding a button to command property-->
+        <StackPanel Orientation="Horizontal" Spacing="10" Margin="0,10,0,0">
+            <Button x:Name="AddButton"
+                    Content="Add"
+                    Command="{Binding AddCommand}"     
+                    Width="95"
+                    Height="40"
+                    FontSize="16"/>
+            
+            <Button x:Name="SubtractButton"
+                    Content="Subtract"
+                    Command="{Binding SubtractCommand}"
+                    Width="95"
+                    Height="40"
+                    FontSize="16"/>
+        </StackPanel>
+        
+        <!-- Operation Buttons (Row 2) -->
+        <StackPanel Orientation="Horizontal" Spacing="10">
+            <Button x:Name="MultiplyButton"
+                    Content="Multiply"
+                    Command="{Binding MultiplyCommand}"
+                    Width="95"
+                    Height="40"
+                    FontSize="16"/>
+            
+            <Button x:Name="DivideButton"
+                    Content="Divide"
+                    Command="{Binding DivideCommand}"
+                    Width="95"
+                    Height="40"
+                    FontSize="16"/>
+        </StackPanel>
+        
+        <!-- Result Display -->
+        <StackPanel Spacing="5" Margin="0,15,0,0">
+            <TextBlock Text="Result:" FontWeight="SemiBold"/>
+            <TextBlock x:Name="ResultText"
+                       Text="{Binding Result}"
+                       FontSize="18"
+                       Foreground="Green"
+                       FontWeight="Bold"/>
+        </StackPanel>
+        
+        <!-- Error message Display -->
+        <StackPanel Spacing="5">
+            <TextBlock Text="Error:" FontWeight="SemiBold"/>
+            <TextBlock x:Name="ErrorText"
+                       Text="{Binding ErrorMessage}"
+                       FontSize="14"
+                       Foreground="Red"
+                       TextWrapping="Wrap"/>
+        </StackPanel>        
+    </StackPanel>
+</Window>
