@@ -49,7 +49,7 @@ namespace AvaloniaTestApp.Tests.Views
             });
             
             await Task.Delay(50); // allow binding to propagate
-            resultLbl.Text.Should().Be("10");
+            resultLbl.Text.Should().Be("25");
             // Assert.Equal("25", resultLbl.Text);
         }       
     }
