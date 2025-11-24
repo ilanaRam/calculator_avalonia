@@ -80,3 +80,4 @@ C:\Users\Ilanam\OneDrive - InspiraO2\Documents\ILANA_WORK\AVALONIA_PROJECTS\Aval
 C:\Users\Ilanam\OneDrive - InspiraO2\Documents\ILANA_WORK\AVALONIA_PROJECTS\AvaloniaTestApp\obj\Debug\net9.0\AvaloniaTestApp.pdb
 C:\Users\Ilanam\OneDrive - InspiraO2\Documents\ILANA_WORK\AVALONIA_PROJECTS\AvaloniaTestApp\obj\Debug\net9.0\AvaloniaTestApp.genruntimeconfig.cache
 C:\Users\Ilanam\OneDrive - InspiraO2\Documents\ILANA_WORK\AVALONIA_PROJECTS\AvaloniaTestApp\obj\Debug\net9.0\ref\AvaloniaTestApp.dll
+C:\Users\Ilanam\OneDrive - InspiraO2\Documents\ILANA_WORK\AVALONIA_PROJECTS\AvaloniaTestApp\obj\Debug\net9.0\AvaloniaTestApp.sourcelink.json

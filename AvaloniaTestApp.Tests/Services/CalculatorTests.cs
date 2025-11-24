@@ -19,7 +19,8 @@ namespace AvaloniaTestApp.Tests.Services
 
         // "[Fact]" this marks this as a test method
         // naming convesion: <method_being tested> <scenario> <expected results>
-        [Fact]          
+        [Fact]  
+        [Trait("Category", "Unit")]        
         public void Add_TwoPositiveNumbers_ReturnsCorrectSum()
         {
             // Patern AAA: Arrange (Test Setup) -> Act (Execute) -> Assert (Verify)
@@ -36,6 +37,7 @@ namespace AvaloniaTestApp.Tests.Services
         }
 
         [Fact]
+        [Trait("Category", "Unit")]
         public void Add_TwoNegativeNumbers_ReturnsCorrectSum()
         {
             // Arrange
@@ -50,6 +52,7 @@ namespace AvaloniaTestApp.Tests.Services
         }
         
         [Fact]
+        [Trait("Category", "Unit")]
         public void Add_PositiveNegative_ReturnsCorrectSum()
         {
             // Arrange
@@ -66,6 +69,7 @@ namespace AvaloniaTestApp.Tests.Services
         // ===== SUBTRACT TESTS =====
         
         [Fact]
+        [Trait("Category", "Unit")]
         public void Subtract_TwoNumbers_ReturnsCorrectDifference()
         {
             // Arrange
@@ -80,6 +84,7 @@ namespace AvaloniaTestApp.Tests.Services
         }
         
         [Fact]
+        [Trait("Category", "Unit")]
         public void Subtract_ResultIsNegative_ReturnsNegativeNumber()
         {
             // Arrange
@@ -92,7 +97,9 @@ namespace AvaloniaTestApp.Tests.Services
             // Assert
             result.Should().Be(-7);
         }
+
         [Fact]
+        [Trait("Category", "Unit")]
         public void Subtract_ZeroNums_ReturnsZero()
         {
             // Arrange
@@ -109,6 +116,7 @@ namespace AvaloniaTestApp.Tests.Services
         // ===== MULTIPLY TESTS =====
         
         [Fact]
+        [Trait("Category", "Unit")]
         public void Multiply_TwoPositiveNumbers_ReturnsCorrectProduct()
         {
             // Arrange
@@ -123,6 +131,7 @@ namespace AvaloniaTestApp.Tests.Services
         }
         
         [Fact]
+        [Trait("Category", "Unit")]
         public void Multiply_ByZero_ReturnsZero()
         {
             // Arrange
@@ -137,6 +146,7 @@ namespace AvaloniaTestApp.Tests.Services
         }
         
         [Fact]
+        [Trait("Category", "Unit")]
         public void Multiply_NegativeNumber_ReturnsNegativeProduct()
         {
             // Arrange
@@ -151,6 +161,7 @@ namespace AvaloniaTestApp.Tests.Services
         }
 
         [Fact]
+        [Trait("Category", "Unit")]
         public void Multiply_TwoNegativeNumbers_ReturnsPosProduct()
         {
             // Arrange
@@ -167,6 +178,7 @@ namespace AvaloniaTestApp.Tests.Services
         // ===== DIVIDE TESTS =====
         
         [Fact]
+        [Trait("Category", "Unit")]
         public void Divide_ValidNumbers_ReturnsCorrectQuotient()
         {
             // Arrange
@@ -181,6 +193,7 @@ namespace AvaloniaTestApp.Tests.Services
         }
 
          [Fact]
+         [Trait("Category", "Unit")]
         public void Divide_ZeroByValidNumber_ReturnsZero()
         {
             // Arrange
@@ -195,6 +208,7 @@ namespace AvaloniaTestApp.Tests.Services
         }
         
         [Fact]
+        [Trait("Category", "Unit")]
         public void Divide_WithRemainder_ReturnsDecimal()
         {
             // Arrange
@@ -209,6 +223,7 @@ namespace AvaloniaTestApp.Tests.Services
         }
         
         [Fact]
+        [Trait("Category", "Unit")]
         public void Divide_ByZero_ThrowsException()
         {
             // Arrange
@@ -223,6 +238,7 @@ namespace AvaloniaTestApp.Tests.Services
         }
 
         [Theory]
+        [Trait("Category", "Unit")]
         [InlineData(2, 3, 5)]      // 2 + 3 = 5
         [InlineData(10, 5, 15)]    // 10 + 5 = 15
         [InlineData(-5, 5, 0)]     // -5 + 5 = 0
