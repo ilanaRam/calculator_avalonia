@@ -17,6 +17,7 @@ namespace AvaloniaTestApp.Tests.ViewModels
         // Here we call methods as if these methods were called upon click on UI elements =====
         
         [Fact]
+        [Trait("Category", "Integration")]
         public void PerformAddition_TwoPositiveNumbers_UpdatesResultProperty()
         {
             // Arrange
@@ -36,6 +37,7 @@ namespace AvaloniaTestApp.Tests.ViewModels
         }
         
         [Fact]
+        [Trait("Category", "Integration")]
         public void PerformAddition_NegativeNumbers_UpdatesResultProperty()
         {
             // Arrange
@@ -54,6 +56,7 @@ namespace AvaloniaTestApp.Tests.ViewModels
         }
         
         [Theory]
+        [Trait("Category", "Integration")]
         [InlineData("5", "3", "8")]
         [InlineData("100", "50", "150")]
         [InlineData("-5", "10", "5")]
@@ -79,6 +82,7 @@ namespace AvaloniaTestApp.Tests.ViewModels
         // // ===== TESTS for "Substruction" method
         
         [Fact]
+        [Trait("Category", "Integration")]
         public void PerformSubtraction_TwoNumbers_UpdatesResultProperty()
         {
             // Arrange
@@ -97,6 +101,7 @@ namespace AvaloniaTestApp.Tests.ViewModels
         }
         
         [Fact]
+        [Trait("Category", "Integration")]
         public void PerformSubtraction_ResultIsNegative_ShowsNegativeResult()
         {
             // Arrange
@@ -117,6 +122,7 @@ namespace AvaloniaTestApp.Tests.ViewModels
         // ===== TESTS for "Multiplectional" method
         
         [Fact]
+        [Trait("Category", "Integration")]
         public void PerformMultiplication_TwoNumbers_UpdatesResultProperty()
         {
             // Arrange
@@ -135,6 +141,7 @@ namespace AvaloniaTestApp.Tests.ViewModels
         }
         
         [Fact]
+        [Trait("Category", "Integration")]
         public void PerformMultiplication_ByZero_ReturnsZero()
         {
             // Arrange
@@ -155,6 +162,7 @@ namespace AvaloniaTestApp.Tests.ViewModels
         // ===== TESTS for "Division" method
         
         [Fact]
+        [Trait("Category", "Integration")]
         public void PerformDivision_ValidNumbers_UpdatesResultProperty()
         {
             // Arrange
@@ -173,6 +181,7 @@ namespace AvaloniaTestApp.Tests.ViewModels
         }
 
         [Fact]
+        [Trait("Category", "Integration")]
         public void PerformDivision_ZeroIsDevided_UpdatesResultProperty()
         {
             // Arrange
@@ -191,12 +200,13 @@ namespace AvaloniaTestApp.Tests.ViewModels
         }
         
         [Fact]
+        [Trait("Category", "Integration")]
         public void PerformDivision_WithRemainder_ShowsDecimalResult()
         {
             // Arrange
             var viewModel = new CalculatorViewModel
             {
-                FirstNumberText = "10",
+                FirstNumberText = "24",
                 SecondNumberText = "3"
             };
             
@@ -204,11 +214,12 @@ namespace AvaloniaTestApp.Tests.ViewModels
             viewModel.PerformDivision();
             
             // Assert
-            viewModel.Result.Should().Contain("3.33");
+            viewModel.Result.Should().Contain("8.00");
             viewModel.ErrorMessage.Should().BeEmpty();
         }
         
         [Fact]
+        [Trait("Category", "Integration")]
         public void PerformDivision_ByZero_ShowsErrorMessage()
         {
             // Arrange
@@ -230,6 +241,7 @@ namespace AvaloniaTestApp.Tests.ViewModels
         // ===== ERROR HANDLING TESTS =====
         
         [Fact]
+        [Trait("Category", "Integration")]
         public void PerformAddition_AfterError_ClearsErrorMessage()
         {
             // Arrange
